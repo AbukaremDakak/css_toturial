@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+.left,
+.maine,
+.right {
+  float: left;
+  padding: 20px;
+  font-size: 25px;
+  width: 20%;
+}
+
+.left {
+  background-color: #afffc7;
+}
+.maine {
+  background-color: #f9cae5;
+  width: 60%;
+}
+.right {
+  background-color: #b6ddf1;
+}
+
+.items {
+  float: left;
+  background-color: #e0e5f893;
+  width: 60%;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+.as2 {
+  float: left;
+  background-color: #e0e5f893;
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+}
+
+li.perant {
+  font-size: 30px;
+  list-style-type: none;
+  padding-left: 20px;
+  text-align: center;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+li.perant:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
+
+ul.child {
+  float: left;
+  left: 20px;
+  position: absolute;
+  padding: 0px;
+  list-style-type: none;
+  width: calc(25% - 10px);
+  background-color: black;
+  color: white;
+  display: none;
+}
+
+li.child:hover {
+  background-color: #484647;
+}
+
+ul.perant {
+  margin: 0px;
+  padding: 0px;
+}
+
+li.food:hover ul.child {
+  display: inherit;
+}
+
+.foot {
+  position: relative;
+  bottom: 0px;
+}
+
+@media screen and (max-width: 800px) {
+  .left,
+  .maine,
+  .right,
+  li.perant {
+    width: 100%;
+  }
+  li.perant {
+    padding: 0px;
+  }
+  li.food:hover ul.child {
+    position: static;
+    width: 100%;
+  }
+}

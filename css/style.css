@@ -1,0 +1,22 @@
+a.two {
+  padding: 12px 30px;
+  background-color: azure;
+  display: inline-block;
+}
+
+p {
+  background-origin: border-box;
+  background-color: rgb(248, 255, 205);
+}
+
+img {
+  vertical-align: bottom;
+}
+
+p .arab {
+  direction: ltr;
+}
+
+body {
+  font-family: "cairo", sans-serif;
+}

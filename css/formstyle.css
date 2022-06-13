@@ -1,0 +1,24 @@
+.field {
+  display: block;
+  margin: 5px;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .field {
+    display: inline-block;
+  }
+  .wrapper {
+    float: left;
+    width: 50%;
+  }
+}
+
+form {
+  background-image: url("/assets/images/pic2.png");
+  background-repeat: repeat;
+}
+

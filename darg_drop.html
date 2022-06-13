@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>darg-drop</title>
+    <link rel="stylesheet" href="/css/darg_drop_style.css" />
+    <!-- <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+      function clickCounter() {
+        if (typeof Storage !== "undefined") {
+          if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+          } else {
+            sessionStorage.clickcount = 1;
+          }
+          document.getElementById("result").innerHTML =
+            "clicksnumber" + sessionStorage.clickcount;
+        } else {
+          document.getElementById("result").innerHTML =
+            "sorry your browser don't support my object";
+        }
+      }
+    </script> -->
+  </head>
+  <body>
+    <div class="rec" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img
+        src="/assets/images/pic2.png"
+        alt="picture"
+        width="50"
+        height="63"
+        id="imre"
+        draggable="true"
+        ondragstart="drag(event)"
+      />
+    </div>
+    <div class="rec" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <button type="button" onclick="clickCounter()">click here</button>
+    <div id="result"></div>
+    <button type="button" onclick="startwork()">startwork</button>
+    <button type="button" onclick="stopwork()">stopwork</button>
+    <p>
+      here there is timer count
+      <output id="resul"></output>
+    </p>
+    <script>
+      var a;
+      function startwork() {
+        if (typeof Worker !== "undefined") {
+          if (typeof a == "undefined") {
+            a = new Worker("darg_drop.js");
+          }
+          a.onmessage = function (event) {
+            document.getElementById("resul").innerHTML = event.data;
+          };
+        } else {
+          document.getElementById("resul").innerHTML =
+            "sorry your computer unsupported";
+        }
+      }
+      function stopwork() {
+        a.terminate();
+        a = undefined;
+      }
+    </script>
+    <footer>
+      <a href="index.html">HomePage</a>      
+    </footer>
+  </body>
+</html>

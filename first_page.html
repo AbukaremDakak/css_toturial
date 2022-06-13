@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>firstPage</title>
+    <link rel="stylesheet" 
+          href="style.css"/>
+    <script>
+       function imagealternative(im) {
+       var cc;
+       if (im == 0) {
+          cc="sertefica.jpg"
+          } else {
+          cc="form.jpg"
+          }
+       document.getElementById('img1').src = cc;       
+       }  
+    </script>        
+</head>
+
+<body>
+    <picture>        
+        <source srcset="/assets/images/pic2.png" 
+                media="(max-width:500px)">
+        <source srcset="/assets/images/pic1.png" 
+                media="(max-width:800px)">
+        <source srcset="/assets/images/pic3.png">
+        <img id="img1"
+             src="/assets/images/pic3.png" 
+             style="width:auto ;"
+             alt="there are three picture"/>
+    </picture>
+    
+    <form method="get">
+        <div>
+            <label>user name</label>
+            <input type="text" 
+                   required name="user"
+                   autofocus/>
+            <label>date</label>
+            <input type="datetime-local"/>
+        </div>
+        <br/>
+        <div>
+            <label>password</label>
+            <input type="password" 
+                   placeholder="password" 
+                   name="pass"
+                   minlength="5"
+                   maxlength="10"/>
+            <input list="programing" 
+                   name="prog"/>
+            <datalist id="programing">
+                <option value="sql">
+                <option value="php">
+                <option value="html">
+            </datalist>
+        </div>
+        <br>
+        <div>
+            <label>place</label>
+            <input type="text" 
+                   value="syria" 
+                   name="place"
+                   readonly />
+        </div>
+        <br/>
+        <div>
+            <label>email</label>
+            <input type="email" 
+                   name="email"/>
+        </div>
+        <br/>
+        <input type="submit"
+               value="save"/>
+        <input type="color" 
+               value="#ff3c23"/>
+        <input type="hidden"/>
+        <input type="number" 
+               min="0" 
+               max="100" 
+               value="0" 
+               step="5"/>
+        <input type="reset"/>
+        <input type="range" 
+               min="0" 
+               max="100" 
+               value="0"/>
+        <div>
+            <label>search</label>
+            <input type="search"/>        
+        </div>
+        <div>
+            <label>choss file</label>
+            <input type="file"/>
+        </div>
+        <div>
+            <label>insert url</label>
+            <input type="url"/>
+        </div>
+
+        <div>            
+            <input id="r1" 
+                   type="radio"
+                   name="rad"
+                   value="one"/>
+            <label for="r1">one</label>        
+        
+            <input id="r2" 
+                   type="radio"
+                   name="rad"
+                   value="two"/>
+            <label for="r2">two</label>                       
+        
+            <input id="r3" 
+                   type="radio"
+                   name="rad"
+                   value="three"/>
+            <label for="r3">three</label>        
+        <div>
+            
+            <input id="c1" 
+                   type="checkbox"
+                   name="che"
+                   value="first"/>
+            <label for="c1">one</label>
+        </div>
+        <div>
+            <input id="c2" 
+                   type="checkbox"
+                   name="che"
+                   value="secand"/>
+            <label for="c2">two</label>
+        </div>               
+        <div>
+            <input id="c3" 
+                   type="checkbox"
+                   name="che"
+                   value="therd"/>
+            <label for="c3">three</label>
+        </div>
+        <hr/>
+        <label for="b1">select book</label>
+        <select name="book" id="b1">
+            <optgroup label="math">
+                <option value="ob1">book1</option>
+                <option value="ob2">book2</option>
+                <option value="ob3">book3</option>
+            </optgroup>
+            <optgroup label="logic">
+                <option value="ob4" >book4</option>
+                <option value="ob5">book5</option>
+                <option value="ob6">book6</option>
+            </optgroup>
+        </select>    
+        <textarea name="textwriting" 
+                  placeholder="write text">
+        </textarea>
+    </form>
+
+    <button onclick="imagealternative(1)"> 
+        second image
+    </button>
+    <button onclick="imagealternative(0)">
+        first image
+    </button>
+
+    <footer>
+        <a class="two" 
+           href="index.html">homepage</a>       
+        <a class="two" 
+           href="table_bage.html">tablepage</a>
+    </footer>
+
+</body>
+
+
+</html>
