@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --maincolor: #888;
+  --mainwidth: 40px;
+}
+
+div.gallery {
+  border: 1px solid #777;
+}
+
+div.gallery:hover {
+  border-color: #ff0000;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  text-align: center;
+  padding: 5px;
+}
+
+a img {
+  width: 300px;
+  height: 200px;
+}
+
+.responsev {
+  width: 24.9999%;
+  padding: 6px;
+  float: left;
+}
+
+@media only screen and (max-width: 800px) {
+  .responsev {
+    width: 49.9999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsev {
+    width: 100%;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+ul {
+  position: relative;
+}
+
+li.image-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  color: #000;
+  display: block;
+  height: 150px;
+}
+
+li a {
+  display: block;
+  height: 150px;
+}
+
+#li1 {
+  left: 0px;
+  width: 200px;
+  background: url("/assets/images/img_5terre.jpg") center center;
+}
+
+#li2 {
+  left: 202px;
+  width: var(--mainwidth);
+  background-color: var(--maincolor);
+}
+
+#li3 {
+  left: 244px;
+  width: var(--mainwidth);
+  background-color: var(--maincolor);
+}
+
+#li4 {
+  left: 286px;
+  width: var(--mainwidth);
+  background-color: var(--maincolor);
+}
+
+footer a {
+  float: right;
+}

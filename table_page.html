@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TbleBage</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <script>
       function changetext() {
         document.getElementById("pt").innerHTML = "that is true";
@@ -57,19 +57,32 @@
         </tr>
       </tfoot>
     </table>
+    <div id="omerders" class="modal">
+      <div class="overlay" onclick="toggleModal('omerders')"></div>
+      <div class="dialog">
+        <iframe
+          src="https://www.youtube.com/embed/yai5b-2k4W8"
+          width="425"
+          height="315"
+          name="iframe_a"
+        ></iframe>
+      </div>
+    </div>
+    <button onclick="toggleModal('omerders')">Open ders</button>
 
-    <iframe
-      src="https://www.youtube.com/embed/yai5b-2k4W8"
-      width="425"
-      height="315"
-      name="iframe_a"
-    ></iframe>
-    <iframe
-      width="420"
-      height="315"
-      src="https://www.youtube.com/embed/X8dkXBolRz4"
-    >
-    </iframe>
+    <div id="newsvideo" class="modal">
+      <div class="overlay" onclick="toggleModalDump('newsvideo', false)"></div>
+      <div class="dialog">
+        <iframe
+          src="https://www.youtube.com/embed/X8dkXBolRz4"
+          width="425"
+          height="315"
+          name="iframe_a"
+        ></iframe>
+      </div>
+    </div>
+    <button onclick="toggleModalDump('newsvideo', true)">Open news</button>
+
     <!-- <a href="first_page.html" target="iframe_a">firstPage</a>
     <a href="index.html" target="iframe_a">HomePage</a> -->
     <p id="pt">This Is toturial text</p>
@@ -88,5 +101,31 @@
       <a class="two" href="index.html">homepage</a>
       <a class="two" href="first_page.html">firstPage</a>
     </footer>
+
+    <script>
+      function toggleModalDump(id, open) {
+        const modal = document.getElementById(id);
+        if (open) {
+          modal.classList.add("open");
+        } else {
+          modal.classList.remove("open");
+        }
+      }
+
+      function toggleModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.toggle("open");
+      }
+
+      function openModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.add("open");
+      }
+
+      function closeModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove("open");
+      }
+    </script>
   </body>
 </html>

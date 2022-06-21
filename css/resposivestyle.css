@@ -22,9 +22,19 @@
   background-color: #b6ddf1;
 }
 
+.back {
+  background-color: #e0e5f893;
+  z-index: -1;
+  width: 100%;
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
 .items {
   float: left;
-  background-color: #e0e5f893;
   width: 60%;
   padding: 20px;
   text-align: center;
@@ -32,7 +42,6 @@
 }
 .as2 {
   float: left;
-  background-color: #e0e5f893;
   width: 40%;
   padding: 20px;
   text-align: center;
@@ -98,4 +107,16 @@ li.food:hover ul.child {
     position: static;
     width: 100%;
   }
+}
+
+li.parent {
+  transition: linear;
+  transition-duration: 500ms;
+  transition-property: all;
+}
+
+ul.child {
+  transition: ease;
+  transition-duration: 1s;
+  transition-property: all;
 }
